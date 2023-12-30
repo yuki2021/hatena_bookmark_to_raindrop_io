@@ -1,0 +1,2 @@
+# hatena_bookmark_to_raindrop_io
+はてなブックマークにポストしたRSSを読み込んで、Raindrop.ioにミラーリング
