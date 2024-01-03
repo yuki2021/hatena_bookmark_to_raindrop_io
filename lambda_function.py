@@ -11,7 +11,7 @@ def get_hatena_bookmarks_of_date():
     # 環境変数からはてなユーザー名を取得
     username = os.environ["HATENA_USERNAME"]
     #前日の日付を計算
-    target_date = datetime.now() - timedelta(days=1)
+    target_date = datetime.now()
     date_str = target_date.strftime('%Y%m%d')
     
     feed_url = f'https://b.hatena.ne.jp/{username}/rss?date={date_str}'
@@ -148,3 +148,7 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
+
+# ローカルで実行する場合
+if __name__ == "__main__":
+    lambda_handler(None, None)
